@@ -1,0 +1,6 @@
+FROM ubuntu:18.04
+RUN apt-get -y update && apt-get -y upgrade
+COPY ./EStuR.war /usr/local/tomcat/webapps/
+EXPOSE 8080
+CMD /usr/local/tomcat/bin/catalina.sh run
+
